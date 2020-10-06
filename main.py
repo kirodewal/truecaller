@@ -26,25 +26,25 @@ def start(client, message):
 def newbt(client,callback_query):
     txt=callback_query.data
     if txt=="about":
-        callback_query.message.edit(text=f"`Channel` : [HindiXstream](t.me/HindiXstream)\n`Creator :` [Kamlesh](t.me/Kamlesh_Kirodewal)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
+        callback_query.message.edit(text=f"`Channel` : [HindiXstream](t.me/HindiXstream)\n`Creator :` [Kamlesh](t.me/Kamlesh_Kirodewal)\n`Language :` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Give Feedback", url="t.me/kamlesh_kirodewal")]]))
     elif txt=="src":
-        callback_query.message.edit(text="Enjoy...:-D\nhttps://github.com/ks406979/truecaller", disable_web_page_preview=True)
+        callback_query.message.edit(text="Enjoy...:-D\nhttps://github.com/ks406989/truecaller", disable_web_page_preview=True)
 
 
 
 @app.on_message(filters.command(["about"]))
 def about(client, message):
     client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,
-                        text=f"`Channel` : [HindiXstream](t.me/HindiXstream)\n`Creator :` [Kamlesh](t.me/Kamlesh_Kirodewal)\n`Language:` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
+                        text=f"`Channel` : [HindiXstream](t.me/HindiXstream)\n`Creator :` [Kamlesh](t.me/Kamlesh_Kirodewal)\n`Language :` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku](https://herokuapp.com/)",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Feedback", url="t.me/agentnova")]]))
+            [[InlineKeyboardButton("Feedback", url="t.me/kamlesh/kirodewal")]]))
 
 
 @app.on_message(filters.command(["botlist"]))
 def list(client, message):
-    client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,text=f"[FilesToVideo](https://t.mefilestovideobot)\n [Miss Tina](https://t.meMiss_Tinabot)\n [Filter Bot](https://t.me/filter_mfmixwebbot)\n [Url Uploader](https://t.me/uploader_mfmixbot)\n [MfMixWeb Bot](https://t.me/mfmixweb_bot)\n [TG 2 YouTube](https://t.me/youtube99_bot)\n [Movie Request](https://t.me/request_moviebot)",disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Give Feedback", url="t.me/Kamlesh_Kirodewal")]]))
+    client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,text=f"[FilesToVideo](https://t.me/filestovideobot)\n [Miss Tina](https://t.me/Miss_Tinabot)\n [Filter Bot](https://t.me/filter_mfmixwebbot)\n [Url Uploader](https://t.me/uploader_mfmixbot)\n [MfMixWeb Bot](https://t.me/mfmixweb_bot)\n [TG 2 YouTube](https://t.me/youtube99_bot)\n [Movie Request](https://t.me/request_moviebot)",disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Give Feedback", url="t.me/Kamlesh_Kirodewal")]]))
     
     
 @app.on_message(filters.command(["log"]))
