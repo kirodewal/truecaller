@@ -30,7 +30,7 @@ def newbt(client,callback_query):
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Give Feedback", url="t.me/kamlesh_kirodewal")]]))
     elif txt=="src":
-        callback_query.message.edit(text="Enjoy...:-D\nhttps://github.com/ks406989/truecaller", disable_web_page_preview=True)
+        callback_query.message.edit(text="Enjoy...:-D\nhttps://github.com/kirodewal/truecaller", disable_web_page_preview=True)
 
 
 
