@@ -42,6 +42,11 @@ def about(client, message):
             [[InlineKeyboardButton("Feedback", url="t.me/agentnova")]]))
 
 
+@app.on_message(filters.command(["botlist"]))
+def list(client, message):
+    client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,text=f"[FilesToVideo](https://t.mefilestovideobot)\n [Miss Tina](https://t.meMiss_Tinabot)\n [Filter Bot](https://t.me/filter_mfmixwebbot)\n [Url Uploader](https://t.me/uploader_mfmixbot)\n [MfMixWeb Bot](https://t.me/mfmixweb_bot)\n [TG 2 YouTube](https://t.me/youtube99_bot)\n [Movie Request](https://t.me/request_moviebot)",disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Give Feedback", url="t.me/Kamlesh_Kirodewal")]]))
+    
+    
 @app.on_message(filters.command(["log"]))
 def stats(client, message):
     stat = client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,
