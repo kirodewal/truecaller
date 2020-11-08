@@ -40,9 +40,9 @@ Simply clone the repository and run the main file:
 
 ```sh
 
-git clone https://github.com/agentnova/KnowhoBot.git
+git clone https://github.com/kirodewal/truecaller.git
 
-cd KnowhoBot
+cd truecaller
 
 python3 -m venv venv
 
