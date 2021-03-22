@@ -17,7 +17,7 @@ app = Client(
 @app.on_message(filters.command(["start"]))
 def start(client, message):
     client.send_message(chat_id=message.chat.id,
-                        text=f"`Hi` **{message.from_user.first_name}**\n Enter the number to search... \n Join Our Channel For Latest Movies & Webseries \n @HindiXstream",reply_markup=InlineKeyboardMarkup(
+                        text=f"`Hi` **{message.from_user.first_name}**\n Enter the number to search... \n Join Our Channel For Updates @HxBots",reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("About", callback_data="about"),
              InlineKeyboardButton("Source", callback_data="src")]]))
     check_status = check(message.chat.id)
@@ -44,7 +44,7 @@ def about(client, message):
 
 @app.on_message(filters.command(["botlist"]))
 def list(client, message):
-    client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,text=f"[Stream Extractor](https://t.me/Hx_VidComBot) : Extract Audio/Subtitles From Video.\n [Miss Tina](https://t.me/Miss_Tinabot) : A Power Full Group Management Bot.\n [Hx Files Store Bot](https://t.me/Hx_FileStoreBot) : Permanent Files Store Bot.\n [ Hx UrlUploader](https://t.me/Hx_URLuploadBot) : Upload Files From Http to Telegram.\n [Hx Rename Bot](https://t.me/Hx_RenameBot) : Rename Doc/Video File Easy & Fast.\n [Hx Rename Bot 02](https://t.me/Hx_rename02bot) : Another Rename Bot For Movies Channel Admin.\n [Movie Request](https://t.me/request_moviebot) \n [Hx Marie Bot](https://t.me/Hx_MarieBot : Clone Of @GroupHelpBot.\n [YouTube Uploader](https://t.me/UtubeitBot) : Upload Videos From Telegram To YouTube Free.",disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Give Feedback", url="t.me/Kirodewal")]]))
+    client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,text=f"[Stream Extractor](https://t.me/Hx_VidComBot): Extract Audio/Subtitles From Video.\n\n[Miss Tina](https://t.me/Miss_Tinabot): A Power Full Group Management Bot.\n\n[Hx Files Store Bot](https://t.me/Hx_FileStoreBot): Permanent Files Store Bot.\n\n[Hx UrlUploader](https://t.me/Hx_URLuploadBot): Upload Files From Http to Telegram.\n\n[Hx Rename Bot](https://t.me/Hx_RenameBot): Rename Doc/Video File Easy & Fast.\n\n[Hx Rename Bot 02](https://t.me/Hx_rename02bot): Another Rename Bot For Movies Channel Admin.\n\n[Movie Request](https://t.me/request_moviebot): Request Movies & Webseries.\n\n[Hx Marie Bot](https://t.me/Hx_MarieBot): Clone Of @GroupHelpBot.\n\n[YouTube Uploader](https://t.me/UtubeitBot): Upload Videos From Telegram To YouTube Free.",disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Give Feedback", url="t.me/Kirodewal")]]))
     
     
 @app.on_message(filters.command(["log"]))
