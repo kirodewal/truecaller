@@ -16,12 +16,12 @@ app = Client(
 
 @app.on_message(filters.command(["start"]))
 def start(client, message):
+    check_status = check(message.chat.id)
     client.send_message(chat_id=message.chat.id,
                         text=f"`Hi` **{message.from_user.first_name}**\n Enter the number to search... \n Join Our Channel For Updates @HxBots",reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("About", callback_data="about"),
              InlineKeyboardButton("Source", callback_data="src"),
              InlineKeyboardButton("Buy Me A Coffee", url="https://pay2me.vercel.app/kkirodewal@okaxis")]]
-    check_status = check(message.chat.id)
 
 @app.on_callback_query()
 def newbt(client,callback_query):
