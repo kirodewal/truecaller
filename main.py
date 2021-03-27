@@ -21,7 +21,7 @@ def start(client, message):
             [[InlineKeyboardButton("About", callback_data="about"),
              InlineKeyboardButton("Source", callback_data="src"),
              InlineKeyboardButton("Buy Me A Coffee", url="https://pay2me.vercel.app/kkirodewal@okaxis")]]
-    check_status = check(message.chat.id)
+    check_status=check(message.chat.id)
 
 @app.on_callback_query()
 def newbt(client,callback_query):
