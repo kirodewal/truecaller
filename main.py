@@ -7,7 +7,7 @@ from creds import cred
 
 firebase = firebase.FirebaseApplication(cred.DB_URL)
 app = Client(
-    "KNOW-WHO-BOT",
+    "TRUECALLER",
     api_id=cred.API_ID,
     api_hash=cred.API_HASH,
     bot_token=cred.BOT_TOKEN
@@ -20,6 +20,7 @@ def start(client, message):
                         text=f"`Hi` **{message.from_user.first_name}**\n Enter the number to search... \n Join Our Channel For Updates @HxBots",reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("About", callback_data="about"),
              InlineKeyboardButton("Source", callback_data="src")]]))
+           [[InlineKeyboardButton("Buy Me A Coffee", url="https://pay2me.vercel.app/kkirodewal@okaxis")]]
     check_status = check(message.chat.id)
 
 @app.on_callback_query()
