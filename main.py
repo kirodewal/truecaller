@@ -13,6 +13,16 @@ app = Client(
     bot_token=cred.BOT_TOKEN
 )
 
+@app.on_callback_query()
+def newbt(client,callback_query):
+    txt=callback_query.data
+    if txt=="about":
+        callback_query.message.edit(text=f"`Update Channel` : [HxBots](t.me/HxBots)\n`Creator :` [Kamlesh Kirodewal](t.me/Kirodewal)\n`Language :` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku Professional](https://herokuapp.com/)",
+                        disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("Support Group", url="t.me/HxSupport")]]))
+    elif txt=="src":
+        callback_query.message.edit(text="Enjoy...:-D\nhttps://github.com/kirodewal/truecaller", disable_web_page_preview=True)
+
 
 @app.on_message(filters.command(["start"]))
 def start(client, message):
@@ -22,16 +32,6 @@ def start(client, message):
             [[InlineKeyboardButton("About", callback_data="about"),
              InlineKeyboardButton("Source", callback_data="src"),
              InlineKeyboardButton("Buy Me A Coffee", url="https://pay2me.vercel.app/kkirodewal@okaxis")]]
-
-@app.on_callback_query()
-def newbt(callback_query):
-    txt=callback_query.data
-    if txt=="about":
-        callback_query.message.edit(text=f"`Update Channel` : [HxBots](t.me/HxBots)\n`Creator :` [Kamlesh Kirodewal](t.me/Kirodewal)\n`Language :` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku Professional](https://herokuapp.com/)",
-                        disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Support Group", url="t.me/HxSupport")]]))
-    elif txt=="src":
-        callback_query.message.edit(text="Enjoy...:-D\nhttps://github.com/kirodewal/truecaller", disable_web_page_preview=True)
 
 
 
