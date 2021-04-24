@@ -24,7 +24,7 @@ def start(client, message):
              InlineKeyboardButton("Buy Me A Coffee", url="https://pay2me.vercel.app/kkirodewal@okaxis")]]
 
 @app.on_callback_query()
-def newbt(client,callback_query):
+def callback(client,callback_query):
     txt=callback_query.data
     if txt=="about":
         callback_query.message.edit(text=f"`Update Channel` : [HxBots](t.me/HxBots)\n`Creator :` [Kamlesh Kirodewal](t.me/Kirodewal)\n`Language :` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku Professional](https://herokuapp.com/)",
