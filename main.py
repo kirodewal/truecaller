@@ -13,6 +13,14 @@ app = Client(
     bot_token=cred.BOT_TOKEN
 )
 
+@app.on_message(filters.command(["log"]))
+def stats(client, message):
+    stat = client.send_message(chat_id=message.chat.id,
+    reply_to_message_id=message.message_id,
+                        text="`Fetching details`")
+    txt = logreturn()
+    stat.edit(txt)
+
 @app.on_callback_query()
 def newbt(client,callback_query):
     txt=callback_query.data
@@ -36,21 +44,13 @@ def start(client, message):
                [InlineKeyboardButton("Buy Me A Coffee ☕", url="https://pay2me.vercel.app/kkirodewal@okaxis")]
            ]))
 
+
 @app.on_message(filters.command(["about"]))
 def about(client, message):
     client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,
                         text=f"<b>⭕ Update Channel ⭕ : @HxBots\n\n⭕ Creator ⭕ : @Kirodewal\n\n⭕ Language ⭕ : [Python3](https://python.org)\n\n⭕ Library ⭕ : [Pyrogram](https://docs.pyrogram.org/)\n\n⭕ Server ⭕ : [Heroku Professional](https://herokuapp.com/)</b>",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("😊 Source Code", callback_data="src")]]))
-
-
-@app.on_message(filters.command(["log"]))
-def stats(client, message):
-    stat = client.send_message(chat_id=message.chat.id,
-    reply_to_message_id=message.message_id,
-                        text="`Fetching details`")
-    txt = logreturn()
-    stat.edit(txt)
 
 @app.on_message(filters.command(["botlist"]))
 def list(client, message):
