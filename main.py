@@ -21,8 +21,8 @@ def newbt(client,callback_query):
                           disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("😊 Source Code", callback_data="src")]]))
     elif txt=="src":
-        callback_query.message.edit(text="👉 This Bot Is Open-Source Code Is Below:\nhttps://github.com/kirodewal/truecaller", disable_web_page_preview=True)
-
+        callback_query.message.edit(text="👉 This Bot Is Open-Source Code Is Below:\nhttps://github.com/kirodewal/truecaller",reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙", callback_data="start")]], disable_web_page_preview=True)
 
 @app.on_message(filters.command(["about"]))
 def about(client, message):
