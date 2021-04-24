@@ -155,9 +155,6 @@ def echo(client, message):
         pro.edit("`Only` **10** `digit numbers allowed` 🤦🏻‍♂️")
 
 
-app.run()
-
-
 
 @app.on_message(filters.command(["botlist"]))
 def list(client, message):
@@ -180,3 +177,5 @@ def start(client, message):
             [[InlineKeyboardButton("About", callback_data="about"),
              InlineKeyboardButton("Source", callback_data="src"),
              InlineKeyboardButton("Buy Me A Coffee", url="https://pay2me.vercel.app/kkirodewal@okaxis")]]
+
+app.run()
