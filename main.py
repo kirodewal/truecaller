@@ -17,17 +17,17 @@ app = Client(
 def newbt(client,callback_query):
     txt=callback_query.data
     if txt=="about":
-        callback_query.message.edit(text=f"`Update Channel` : [HxBots](t.me/HxBots)\n`Creator :` [Kamlesh Kirodewal](t.me/Kirodewal)\n`Language :` [Python3](https://python.org)\n`Library :` [Pyrogram](https://docs.pyrogram.org/) \n`Server  :` [Heroku Professional](https://herokuapp.com/)",
-                        disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("Support Group", url="t.me/HxSupport")]]))
+        callback_query.message.edit(text=f"<b>⭕ Update Channel ⭕ : @HxBots\n\n⭕ Creator ⭕ : @Kirodewal\n\n⭕ Language ⭕ : [Python3](https://python.org)\n\n⭕ Library ⭕ : [Pyrogram](https://docs.pyrogram.org/)\n\n⭕ Server ⭕ : [Heroku Professional](https://herokuapp.com/)</b>",
+                          disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("😊 Support Group", url="t.me/HxSupport")]]))
     elif txt=="src":
-        callback_query.message.edit(text="Enjoy...:-D\nhttps://github.com/kirodewal/truecaller", disable_web_page_preview=True)
+        callback_query.message.edit(text="👉 This Bot Is Open-Source Code Is Below:\nhttps://github.com/kirodewal/truecaller", disable_web_page_preview=True)
 
 
 @app.on_message(filters.command(["about"]))
 def about(client, message):
     client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,
-                        text=f"<b>`⭕ Update Channel ⭕` : @HxBots\n\n`⭕ Creator ⭕ :` @Kirodewal\n\n`⭕ Language ⭕ :` [Python3](https://python.org)\n\n`⭕ Library ⭕ :` [Pyrogram](https://docs.pyrogram.org/)\n\n`⭕ Server ⭕ :` [Heroku Professional](https://herokuapp.com/)</b>",
+                        text=f"<b>⭕ Update Channel ⭕ : @HxBots\n\n⭕ Creator ⭕ : @Kirodewal\n\n⭕ Language ⭕ : [Python3](https://python.org)\n\n⭕ Library ⭕ : [Pyrogram](https://docs.pyrogram.org/)\n\n⭕ Server ⭕ : [Heroku Professional](https://herokuapp.com/)</b>",
                         disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("Support Group", url="t.me/HxSupport")]]))
 
@@ -51,8 +51,8 @@ def start(client, message):
     client.send_message(chat_id=message.chat.id,
                         text=f"`Hi` **{message.from_user.first_name}**\n Enter the number to search... \n Join Our Channel For Updates @HxBots",reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("About", callback_data="about"),
-             InlineKeyboardButton("Source", callback_data="src"),
-             InlineKeyboardButton("Buy Me A Coffee", url="https://pay2me.vercel.app/kkirodewal@okaxis")]]
+             InlineKeyboardButton("Source", callback_data="src")]],
+            [[InlineKeyboardButton("Buy Me A Coffee ☕", url="https://pay2me.vercel.app/kkirodewal@okaxis")]]
        )
      )
 
