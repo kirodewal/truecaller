@@ -24,6 +24,15 @@ def newbt(client,callback_query):
         callback_query.message.edit(text="👉 This Bot Is Open-Source Code Is Below:\nhttps://github.com/kirodewal/truecaller",reply_markup=InlineKeyboardMarkup(
             [[InlineKeyboardButton("🔙", callback_data="start")]], disable_web_page_preview=True)
 
+
+@app.on_message(filters.command(["log"]))
+def stats(client, message):
+    stat = client.send_message(chat_id=message.chat.id,
+    reply_to_message_id=message.message_id,
+                        text="`Fetching details`")
+    txt = logreturn()
+    stat.edit(txt)
+
 @app.on_message(filters.command(["about"]))
 def about(client, message):
     client.send_message(chat_id=message.chat.id, reply_to_message_id=message.message_id,
@@ -37,16 +46,9 @@ def list(client, message):
     client.send_message(chat_id=message.chat.id,
     reply_to_message_id=message.message_id,
                         text=f"[@Stream-Extractor](https://t.me/Hx_VidComBot): Extract Audio/Subtitles From Video.\n\n[@Miss-Tina](https://t.me/Miss_Tinabot): A Power Full Group Management Bot.\n\n[@Hx-Files-Store-Bot](https://t.me/Hx_FileStoreBot): Permanent Files Store Bot.\n\n[@Hx-UrlUploader](https://t.me/Hx_URLuploadBot): Upload Files From Http to Telegram.\n\n[@Hx-Rename-Bot](https://t.me/Hx_RenameBot): Rename Doc/Video File Easy & Fast.\n\n[@Hx-Rename-Bot-02](https://t.me/Hx_rename02bot): Another Rename Bot For Movies Channel Admin.\n\n[@Movie-Request](https://t.me/request_moviebot): Request Movies & Webseries.Currently Down 😣.\n\n[@Hx-Marie-Bot](https://t.me/Hx_MarieBot): Clone Of @GroupHelpBot.\n\n[@YouTube-Uploader](https://t.me/UtubeitBot): Upload Videos From Telegram To YouTube Free.\n\n[@Google-Drive-Upload-Bot](https://t.me/Hx_GDriveBot): Upload Files From Http Link Or Telegram To Google Drive.\n\n[@Hx-AnyDLBot](https://t.me/hx_anydlbot): All-In-One Telegram Bot. ",disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Give Feedback", url="t.me/Kirodewal")]]))
+    reply_markup=InlineKeyboardMarkup(
+            [[InlineKeyboardButton("🔙", callback_data="start")]], disable_web_page_preview=True)
     
-    
-@app.on_message(filters.command(["log"]))
-def stats(client, message):
-    stat = client.send_message(chat_id=message.chat.id,
-    reply_to_message_id=message.message_id,
-                        text="`Fetching details`")
-    txt = logreturn()
-    stat.edit(txt)
-
 
 @app.on_message(filters.command(["start"]))
 def start(client, message):
