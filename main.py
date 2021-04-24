@@ -55,7 +55,6 @@ def start(client, message):
              InlineKeyboardButton("Buy Me A Coffee", url="https://pay2me.vercel.app/kkirodewal@okaxis")]]
 
 
-
 @app.on_message(filters.text)
 def echo(client, message):
     actvt = ""
