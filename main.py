@@ -57,7 +57,7 @@ def newbt(client,callback_query):
             [[InlineKeyboardButton("😊 Source Code", callback_data="src")]]))
     elif txt=="src":
         callback_query.message.edit(text="👉 This Bot Is Open-Source Code Is Below:\nhttps://github.com/kirodewal/truecaller",reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("🔙", callback_data="start")]], disable_web_page_preview=True)
+            [[InlineKeyboardButton("🔙", callback_data="start")]]), disable_web_page_preview=True)
 
 
 
