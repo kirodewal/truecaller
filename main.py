@@ -19,7 +19,7 @@ def newbt(client,callback_query):
     if txt=="about":
         callback_query.message.edit(text=f"<b>⭕ Update Channel ⭕ : @HxBots\n\n⭕ Creator ⭕ : @Kirodewal\n\n⭕ Language ⭕ : [Python3](https://python.org)\n\n⭕ Library ⭕ : [Pyrogram](https://docs.pyrogram.org/)\n\n⭕ Server ⭕ : [Heroku Professional](https://herokuapp.com/)</b>",
                           disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup(
-            [[InlineKeyboardButton("😊 Source Code", callback_dara="src")]]))
+            [[InlineKeyboardButton("😊 Source Code", callback_data="src")]]))
     elif txt=="src":
         callback_query.message.edit(text="👉 This Bot Is Open-Source Code Is Below:\nhttps://github.com/kirodewal/truecaller", disable_web_page_preview=True)
 
