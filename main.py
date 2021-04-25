@@ -35,17 +35,16 @@ def about(client, message):
 def stats(client, message):
     stat = client.send_message(chat_id=message.chat.id,
     reply_to_message_id=message.message_id,
-                        text="<b>`Fetching details`\n\n© @HxBots</b>")
+                        text=f"<b>`Fetching details`\n\n© @HxBots</b>")
     txt = logreturn()
     stat.edit(txt)
 
 @app.on_message(filters.command(["botlist"]))
 def list(client, message):
     client.send_message(chat_id=message.chat.id,
-    disable_web_page_preview=True,
     reply_to_message_id=message.message_id,
-                        text=f"<b>[@Stream-Extractor](https://t.me/Hx_VidComBot): Extract Audio/Subtitles From Video.\n\n[@Miss-Tina](https://t.me/Miss_Tinabot): A Power Full Group Management Bot.\n\n[@Hx-Files-Store-Bot](https://t.me/Hx_FileStoreBot): Permanent Files Store Bot.\n\n[@Hx-UrlUploader](https://t.me/Hx_URLuploadBot): Upload Files From Http to Telegram.\n\n[@Hx-Rename-Bot](https://t.me/Hx_RenameBot): Rename Doc/Video File Easy & Fast.\n\n[@Hx-Rename-Bot-02](https://t.me/Hx_rename02bot): Another Rename Bot For Movies Channel Admin.\n\n[@Movie-Request](https://t.me/request_moviebot): Request Movies & Webseries.Currently Down 😣.\n\n[@Hx-Marie-Bot](https://t.me/Hx_MarieBot): Clone Of @GroupHelpBot.\n\n[@YouTube-Uploader](https://t.me/UtubeitBot): Upload Videos From Telegram To YouTube Free.\n\n[@Google-Drive-Upload-Bot](https://t.me/Hx_GDriveBot): Upload Files From Http Link Or Telegram To Google Drive.\n\n[@Hx-AnyDLBot](https://t.me/hx_anydlbot): All-In-One Telegram Bot. ",disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Give Feedback", url="t.me/Kirodewal</b>")]]))
-    
+                        text=f"<b>[@Stream-Extractor](https://t.me/Hx_VidComBot): Extract Audio/Subtitles From Video.\n\n[@Miss-Tina](https://t.me/Miss_Tinabot): A Power Full Group Management Bot.\n\n[@Hx-Files-Store-Bot](https://t.me/Hx_FileStoreBot): Permanent Files Store Bot.\n\n[@Hx-UrlUploader](https://t.me/Hx_URLuploadBot): Upload Files From Http to Telegram.\n\n[@Hx-Rename-Bot](https://t.me/Hx_RenameBot): Rename Doc/Video File Easy & Fast.\n\n[@Hx-Rename-Bot-02](https://t.me/Hx_rename02bot): Another Rename Bot For Movies Channel Admin.\n\n[@Movie-Request](https://t.me/request_moviebot): Request Movies & Webseries.Currently Down 😣.\n\n[@Hx-Marie-Bot](https://t.me/Hx_MarieBot): Clone Of @GroupHelpBot.\n\n[@YouTube-Uploader](https://t.me/UtubeitBot): Upload Videos From Telegram To YouTube Free.\n\n[@Google-Drive-Upload-Bot](https://t.me/Hx_GDriveBot): Upload Files From Http Link Or Telegram To Google Drive.\n\n[@Hx-AnyDLBot](https://t.me/hx_anydlbot): All-In-One Telegram Bot. ",disable_web_page_preview=True, reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton("Give Feedback", url="t.me/Kirodewal</b>")]])),
+  
 @app.on_callback_query()
 def newbt(client,callback_query):
     txt=callback_query.data
