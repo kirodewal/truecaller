@@ -10,3 +10,4 @@ requests-toolbelt
 sseclient
 pytz
 python-dotenv
+Ytdl
