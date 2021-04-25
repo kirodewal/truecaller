@@ -1,6 +1,6 @@
 # Truecaller Bot For Telegram
 
-## Find It On Telegram https://t.me/truecalerbot
+## Find It On Telegram [@TrueCalerBot](https://t.me/truecalerbot)
 
 # TruecallerBot
 
